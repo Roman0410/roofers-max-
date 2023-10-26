@@ -10,11 +10,31 @@ header {
   }
   &.header-scroll {
     top: -44px;
+    @media screen and (max-width: 1124px) {
+      border-bottom: 1px solid var(--accent-color);
+    }
+
     .header-body {
       background-color: var(--darkblue);
     }
+    @media screen and (max-width: 631px) {
+      top: -89px;
+    }
     @media screen and (max-width: 440px) {
-      top: -37px;
+      top: -78px;
+    }
+    .nav-item {
+      &:hover,
+      &:active,
+      &:focus {
+        .nav-link {
+          color: var(--accent-color) !important;
+          opacity: 1;
+          path {
+            fill: var(--accent-color) !important;
+          }
+        }
+      }
     }
     .nav-item .nav-link {
       color: #ffffff !important;
@@ -28,6 +48,12 @@ header {
         max-width: 20px;
       }
     }
+    .nav-item.current .nav-link {
+      color: var(--accent-color) !important;
+      path {
+        fill: var(--accent-color) !important;
+      }
+    }
   }
 }
 header.black {
@@ -39,9 +65,15 @@ header.black {
   }
   .nav-item.current .nav-link {
     color: var(--accent-color) !important;
+    path {
+      fill: var(--accent-color) !important;
+    }
   }
   a.tel {
     color: #000;
+    img {
+      max-width: 20px;
+    }
   }
 }
 .header {
@@ -85,6 +117,9 @@ header.black {
       display: flex;
       align-items: center;
       gap: 4px;
+      img {
+        max-width: 20px;
+      }
       @media screen and (max-width: 400px) {
         font-size: 15px;
       }
@@ -102,7 +137,7 @@ header.black {
 
   .header-burger {
     display: none;
-    padding: 0 10px;
+    padding: 16px;
     background-color: #ffffff;
     @media screen and (max-width: 1124px) {
       display: flex;
@@ -119,8 +154,13 @@ header.black {
       display: none;
       padding: 0 16px;
       margin-bottom: 32px;
+      border-bottom: 1px solid var(--accent-color);
       .logo {
         max-width: 170px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
       .close-menu {
         width: 40px;
@@ -138,6 +178,13 @@ header.black {
     }
     .bottom-mobile {
       display: none;
+      .soc-list {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
       @media screen and (max-width: 1145px) {
         display: block;
         .btn {
@@ -156,7 +203,7 @@ header.black {
       width: 100%;
       height: 100%;
       background: #e8f1fb;
-      padding-top: 20px;
+
       transition: all 0.2s ease;
       overflow: auto;
       flex-direction: column;
@@ -209,6 +256,34 @@ header.black {
       height: auto;
       align-items: flex-start;
       padding: 0 16px;
+      .nav-link {
+        color: #ffffff !important;
+        path {
+          fill: #ffffff !important;
+        }
+      }
+      .nav-item {
+        &:hover,
+        &:active,
+        &:focus {
+          .nav-link {
+            color: var(--accent-color) !important;
+            opacity: 1;
+            path {
+              fill: var(--accent-color) !important;
+            }
+          }
+        }
+      }
+      .nav-item.current {
+        .nav-link {
+          color: var(--accent-color) !important;
+          opacity: 1;
+          path {
+            fill: var(--accent-color) !important;
+          }
+        }
+      }
     }
   }
   .nav-item {
@@ -306,7 +381,7 @@ header.black {
   cursor: pointer;
   height: 100%;
   min-width: 123px;
-  padding-bottom: 2px;
+  padding: 12px;
   img {
     width: 100%;
     height: 100%;
@@ -315,6 +390,9 @@ header.black {
 .current {
   .nav-link {
     color: var(--accent-color);
+    path {
+      fill: var(--accent-color);
+    }
   }
   &::after {
     content: "";
@@ -384,6 +462,14 @@ header.black {
         padding: 10px 16px;
         @media screen and (max-width: 631px) {
           width: 100%;
+        }
+        @media screen and (max-width: 440px) {
+          padding: 8px;
+        }
+        svg {
+          @media screen and (max-width: 768px) {
+            width: 18px;
+          }
         }
         path {
           transition: all 0.1s linear;

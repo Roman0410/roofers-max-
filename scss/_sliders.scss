@@ -267,10 +267,11 @@
     justify-content: space-between;
     padding: 0 24px;
   }
-  .prev {
+  .prev,
+  .next {
+    cursor: pointer;
   }
-  .but {
-  }
+
   .next {
   }
   .slick-dots {

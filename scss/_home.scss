@@ -8,7 +8,10 @@ body.lock {
   .sertif {
     z-index: 1;
   }
-
+  &.gallery {
+    height: 100vh !important;
+    border-bottom: 4px solid var(--accent-color);
+  }
   .wrapper {
     display: flex;
     align-items: center;
@@ -849,9 +852,11 @@ body.lock {
       .item-title {
         color: #fffdfd;
         text-align: left;
+        cursor: pointer;
       }
       .section-subtitle {
         color: #fffdfd;
+        cursor: pointer;
       }
     }
   }
@@ -933,6 +938,7 @@ body.lock {
   }
   .faq-list {
     .faq-item {
+      cursor: pointer;
       &:not(:last-child) {
         border-bottom: 1px solid #486da3;
       }
@@ -948,6 +954,7 @@ body.lock {
       height: 2px;
       background-color: var(--accent-color);
       border-radius: 1px;
+      cursor: pointer;
 
       &::before {
         content: "";
@@ -958,6 +965,7 @@ body.lock {
         display: block;
         transform: rotate(90deg);
         transition: all 0.2s linear;
+        cursor: pointer;
       }
       &.open::before {
         transform: rotate(180deg);
@@ -969,6 +977,7 @@ body.lock {
       font-weight: 500;
       line-height: 110.5%;
       display: flex;
+      cursor: pointer;
     }
     .answer {
       color: #e4e4e4;
@@ -979,6 +988,7 @@ body.lock {
       line-height: 1.36;
       transition: all 0.3s linear;
       overflow: hidden;
+      cursor: pointer;
 
       &.open {
         max-height: 900px;
@@ -1075,6 +1085,7 @@ body.lock {
       font-family: Poppins;
       font-size: 16px;
       line-height: 110.5%;
+      height: 120px;
     }
   }
   .row1 {
@@ -1325,7 +1336,14 @@ body.lock {
 .serviceIncludes {
   background-position: center;
   background-size: cover;
-
+  padding: 78px 0;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    padding: 56px 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 47px 0;
+  }
   .container {
   }
   .top {
@@ -1593,14 +1611,14 @@ body.lock {
   }
   .img {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 550px;
+    height: 550px;
     border-radius: 50%;
     overflow: hidden;
     right: 0;
     top: 50%;
     transform: translate(20%, -50%);
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1240px) {
       width: 400px;
       height: 400px;
     }

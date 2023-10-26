@@ -67,6 +67,9 @@
     // width: calc(100% / 5);
     padding: 0 50px;
   }
+  .col1 {
+    padding-left: 0;
+  }
   .col2 img {
     width: 25px;
   }
@@ -86,6 +89,7 @@
   }
   .col5 {
     border: none !important;
+    padding-right: 0;
   }
   .title {
     color: #efefef;
