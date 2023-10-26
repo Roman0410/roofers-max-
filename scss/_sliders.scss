@@ -1,0 +1,307 @@
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+.slick-dots {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.slick-dots li {
+}
+.slick-dots button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffd4b8;
+  color: var(--accent-color);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* Активная точка */
+.slick-dots li.slick-active button {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+/* Элемент точки */
+
+.home-hero {
+  height: 100vh;
+  position: relative;
+  .sertif {
+    position: absolute;
+    z-index: 1001;
+    right: 27px;
+    top: 129px;
+    @media screen and (max-width: 768px) {
+      left: 22px;
+      top: 150px;
+      width: 144px;
+    }
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+  }
+  .hero-slider {
+    .slick-list {
+      height: 100%;
+      background-color: rgb(0, 0, 0);
+    }
+    .slick-track {
+      height: 100%;
+      transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+    height: 100%;
+    .hero-slide {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+      }
+      &.slick-active {
+        img {
+          transform: scale(1);
+          animation: cssAnimation 5s 1 ease-in-out reverse;
+        }
+      }
+    }
+  }
+  .container {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    background: rgba(14, 29, 52, 0.37);
+    .card {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      height: 100%;
+      max-width: 952px;
+    }
+    .section-title {
+      text-align: center;
+      color: #fff;
+    }
+    .text {
+      text-align: center;
+      color: #fff;
+    }
+    .btn {
+      width: 100%;
+      max-width: 302px;
+      margin-top: 16px;
+    }
+    .order {
+    }
+  }
+}
+
+@keyframes cssAnimation {
+  from {
+    -webkit-transform: scale(1) translate(0px);
+  }
+  to {
+    -webkit-transform: scale(1.08) translate(0px);
+  }
+}
+
+.process {
+  padding: 80px 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  @media screen and (max-width: 1024px) {
+    background-size: cover;
+    background-position: center;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 56px 15px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 47px 15px;
+  }
+  .container {
+  }
+  .section-subtitle {
+    margin-bottom: 8px;
+  }
+  .section-title {
+    margin-bottom: 45px;
+  }
+  .process-slider {
+  }
+  .process-slide {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 32px;
+    @media screen and (max-width: 800px) {
+      margin-bottom: 24px;
+    }
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+  .icon {
+    background-color: var(--accent-color);
+    max-width: 247px;
+    max-height: 247px;
+    min-width: 247px;
+    min-height: 247px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 15px solid #ffd4b8;
+    img {
+      width: 110px;
+      height: 110px;
+    }
+    @media screen and (max-width: 800px) {
+      max-width: 162px;
+      max-height: 162px;
+      min-width: 162px;
+      min-height: 162px;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+  .card {
+  }
+  .step {
+    color: var(--accent-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+  .title {
+    color: #1c1919;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 110.5%;
+    margin-bottom: 16px;
+    @media screen and (max-width: 800px) {
+      font-size: 24px;
+    }
+  }
+  .text {
+  }
+}
+
+.images-slider {
+  position: relative;
+  .images-slide {
+    height: 70vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .slider-navigation {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+  .prev {
+  }
+  .but {
+  }
+  .next {
+  }
+  .slick-dots {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+    width: 100%;
+  }
+  .slick-dots li {
+  }
+  .slick-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffd4b8;
+    color: var(--accent-color);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0;
+    display: block;
+    padding: 0;
+  }
+  /* Активная точка */
+  .slick-dots li.slick-active button {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+}
