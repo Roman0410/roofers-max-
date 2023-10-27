@@ -2861,12 +2861,23 @@ body.lock {
 .contactUs {
   background-position: top;
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 200px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
 }
 @media screen and (max-width: 950px) {
   .contactUs {
-    background-size: contain;
-    background-repeat: no-repeat;
+    padding-bottom: 60px;
   }
 }
 .contactUs .section-title {
@@ -2874,12 +2885,12 @@ body.lock {
   margin-bottom: 40px;
 }
 .contactUs .line {
-  height: 140px;
   background-color: var(--blue);
+  padding: 30px 0;
 }
 @media screen and (max-width: 950px) {
   .contactUs .line {
-    height: 400px;
+    padding-top: 80px;
   }
 }
 .contactUs .contact-list {
@@ -2889,12 +2900,14 @@ body.lock {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 24px;
-  margin-top: -50px;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
 }
 @media screen and (max-width: 950px) {
   .contactUs .contact-list {
-    gap: 65px;
-    margin-top: -300px;
+    gap: 75px;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 .contactUs .contact-item {
